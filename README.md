@@ -1,3 +1,3 @@
 # basic_Node_app
 
-A minimum Node.js application using Express.js
+A  Node.js application using Express.js for user connections
