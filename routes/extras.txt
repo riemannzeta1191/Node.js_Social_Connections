@@ -1,0 +1,61 @@
+//      var currentUser = req.session.theUser;
+   //      console.log(userdata,"lll");
+   //      random_user = await userdatadb.getusers();
+   //       req.session.login = 1;
+   //       if(currentUser == undefined){
+   //       // console.log(userdata["userdata"][0]);
+   //       // req.session.theUser = userdata["userdata"][0];
+    
+   //       req.session.theUser = random_user[0]
+   //       // console.log(req.session.theUser);
+   //       req.session.login = 1;
+   //     var userId = req.session.theUser.user_ID;
+   //     var currentUserProfile = await userprofileDB.getUserProfile(userId);
+   //     console.log(currentUserProfile,"lplpl");
+   //     var li = currentUserProfile;
+   //     // console.log(li)
+   //     k = [];
+   //     for(let j=0;j<li.length;j++){
+   //        var ans = await connectionDB.getConnections_ID(li[j].connection_ID);
+   //        k.push(ans);
+   //     }
+   //     console.log("jij",k);
+   //     map = [];
+   //     for(let m=0;m<currentUserProfile.length;m++){
+   //      for(let n=0;n<k.length;n++){
+   //        if(currentUserProfile[m].connection_ID == k[n][0].connection_ID){
+   //          map.push([k[n],currentUserProfile[m].rsvp])
+   //        }
+   //      }
+   //     }
+   //      // console.log("jy",k);
+   //     req.session.currentUserProfile = currentUserProfile;
+   //     // console.log(req.session);
+   //     req.session.UserProfileList = k;
+   //     var userconnectionssession = req.session.currentUserProfile.connection_list;
+   //     // console.log(userconnections);
+   //     // req.session.save();
+   //     var userconnections = k;
+   //     if (userconnections == undefined){
+   //      console.log("llo");
+   //       res.render('savedconnection',{data:[]});
+   //     }
+   //     else{
+   //      // console.log(map[0],"jjjj");
+
+   //      // console.log(userconnections[0]['connection_name']);
+   //      res.render('profile',{data: map,user :req.session.theUser});
+   //    }
+   //  }
+
+   //     var userId = req.session.theUser.user_ID;
+   //     var currentUserProfile = userprofileDB.getUserProfile(userId);
+   //     req.session.currentUserProfile = currentUserProfile;
+   //     var userconnections = req.session.currentUserProfile.connection_list;
+   //      var id = req.body.connectioncode;
+   //     var sess_list = req.session.currentUserProfile.connection_list;
+   //     res.render('savedconnection',{data: userconnections ,user :req.session.theUser,session :req.session.login});
+
+
+   //     }
+   // }

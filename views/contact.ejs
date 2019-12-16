@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About</title>
+<link rel="icon" type="image/jpg" href="/images/logo.jpg" />
+<link rel="stylesheet" type="text/css" href="assets/main.css" >
+</head>
+<body>
+  <div id ="wrapper">
+    
+  
+    <% if(session==1){ %>
+   <% include partials/connection_log.ejs %>
+       <% include partials/navigation_log.ejs %>
+ <% } else{ %>  
+   <% include partials/header.ejs %>
+  <% include partials/navigation.ejs %>
+<% } %>
+
+
+   <div id = "mains">
+    	<article>
+      	<h2 class="about">
+      	Contact
+      	</h2>
+    	</article>
+
+    	<article>
+      	<h3>
+      	CONTACT US<br>
+        ADDRESS:- 9201 University City Blvd,NC 28223<br>
+        Phn :- 980234781<br>
+        </h3>
+      </article>
+
+    </div>
+
+
+<% include partials/footer.ejs %>
+</div>
+</body>
+</html>

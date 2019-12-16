@@ -1,0 +1,143 @@
+use SocialConnection
+
+db.createCollection('connection');
+db.createCollection('users');
+db.createCollection('userconnections');
+
+var data = [
+    {
+        connection_ID: "CCI_1",
+        connection_name: "ITSC 2110- Working with Netbeans",
+        connection_topic: "Study",
+        hosted_by:"Mario",
+        details: "I'm new to this Netbeans and wouldlove to connect with others to explore this IDE and learn",
+        date: "Thursday, Sept 29 2019",
+        location: "Woodward Hall 4th Floor",
+        time: "5:30pm - 6:30 pm",
+        rsvp:"No"
+
+    },
+    {
+        connection_ID: "CCI_2",
+        connection_name: "ITCS 6156 Machine Learning",
+        connection_topic: "Study",
+        hosted_by:"Dr John Guttag",
+        details: "Lets chat on Classification Techniques",
+        date: "Tuesday, Sept 27 2019",
+        location: "Woodward Hall 1st Floor",
+        time: "5:30pm - 6:30 pm",
+        rsvp:"No"
+
+    },
+
+
+    {
+        connection_ID: "CCI_3",
+        connection_name: "Let's play tennis",
+        connection_topic: "Sports",
+         hosted_by:"Katherine",
+        details: "Looking for Tennis players for college tournament",
+        date: "Monday,11 Sept 2019",
+        location: "Macey 3rdFloor",
+        time:     "9am - 10 am",
+        rsvp:"No"
+
+    },
+
+    {
+        connection_ID: "CCI_4",
+        connection_name: "Football Anyone",
+        connection_topic: "Sports",
+        hosted_by:"Gary",
+        details: "Football Tournament intercollegiate through North Carolina",
+        date: "Wednesday,26 Oct,2019",
+        location: "Duke 2nd Floor",
+        time:    "9am - 10am",
+        rsvp:"No"
+
+    },
+
+    {
+        connection_ID: "CCI_5",
+        connection_name: "Apache Flume",
+        connection_topic: "Study",
+        hosted_by:"Chrysler",
+        details: "Realtime twitter tag entity classification using Apache Flume and Apache Kafka using Haskell",
+        date: "Monday,1st Jan 2020",
+        location: "Atkins 1st floor ",
+        time: "3am - 7am",
+        rsvp:"No"
+
+    },
+    {
+        connection_ID: "CCI_6",
+        connection_name: "Cricket Tournament",
+        connection_topic: "Sports",
+        hosted_by:"Jenny Sanders",
+        details: "Learning Cricket and it's minute technicalities",
+        date: "Friday,20 Dec 2019",
+        location: "Portal 1st Floor",
+        time:"4pm-6pm",
+        rsvp:"No"
+
+    },
+   
+];
+
+
+let userdata = [
+  {
+        user_ID:"Riemann1191",
+        first_name:"Bernhard",
+        last_name:"Riemann",
+        email:"riemann@gmail.com",
+        address:"9393 UT Drive",
+        city:"charlotte",
+        state:"NC",
+        zipcode:28262,
+        country:"USA"
+       
+
+    },
+    {
+        user_ID:"Neil19",
+        first_name:"Neils",
+        last_name:"Bohr",
+        email:"bohr@gmail.com",
+        address:"9353 UT Drive",
+        city:"charlotte",
+        state:"NC",
+        zipcode:28262,
+        country:"USA"
+        
+
+    },
+]
+
+
+const userconndata = [
+{
+  userid: "Riemann1191",
+  connection:"CCI_1",
+  rsvp: "Yes"
+},
+{
+  userid: "Riemann1191",
+  connection:"CCI_6",
+  rsvp: "May Be"
+},
+{
+  userid: "Neil19",
+  connection: "CCI_3",
+  rsvp: "Yes"
+},
+{
+  userid: "Riemann1191",
+  connection: "CCI_4",
+  rsvp: "Yes"
+}];
+
+
+db.connection.insertMany(data);
+db.users.insertMany(userdata);
+db.userconnections.insertMany(userconndata);

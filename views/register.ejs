@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="The Title">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/assets/main.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+    <div class="page-container">
+
+   <% include partials/header.ejs %>
+        <% include partials/navigation.ejs %>
+   
+        <section>
+
+        <form class="form-example" action='/register' method="POST">
+       
+            <p>
+              <label for="username">
+                <span>username </span>
+              </label>
+              <input type="text" id="username" name="username" placeholder="username">
+            </p>
+               <p>
+              <label for="password">
+                <span>password </span>
+              </label>
+              <input type="password" id="password" name="password" placeholder="password">
+            </p>
+            <p>
+              <label for="firstname">
+                <span>firstname </span>
+              </label>
+              <input type="text" id="firstname" name="firstname" placeholder="firstname">
+            </p>
+
+                  <p>
+              <label for="lastname">
+                <span>lastname </span>
+              </label>
+              <input type="text" id="lastname" name="lastname" placeholder="lastname">
+            </p>
+
+
+                <p>
+              <label for="email">
+                <span>email </span>
+              </label>
+              <input type="text" id="email" name="email" placeholder="email">
+            </p>
+            <p>
+            <label for="address">
+                <span>address </span>
+              </label>
+              <input type="text"  id="address" name="address" placeholder="address">
+            </p>
+               
+                 <p>
+              <label for="city">
+                <span>city </span>
+              </label>
+              <input type="text" id="city" name="city" placeholder="city">
+            </p>
+            
+               <p>
+              <label for="state">
+                <span>state </span>
+              </label>
+              <input type="text" id="state" name="state" placeholder="state">
+            </p>
+            
+               <p>
+              <label for="zipcode">
+                <span>zipcode </span>
+              </label>
+              <input type="text" id="zipcode" name="zipcode" placeholder="zipcode">
+            </p>
+            
+               <p>
+              <label for="country">
+                <span>country </span>
+              </label>
+              <input type="text" id="country" name="country" placeholder="country">
+            </p>
+                <p> <button type="submit">create connection</button> </p>
+       
+    </form>
+        </section>
+<% include partials/footer.ejs %>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About</title>
+<link rel="icon" type="image/jpg" href="/images/logo.jpg" />
+<link rel="stylesheet" type="text/css" href="assets/main.css" >
+</head>
+<body>
+  <div id ="wrapper">
+
+    <% if(session==1){ %>
+   <% include partials/connection_log.ejs %>
+        <% include partials/navigation_log.ejs %>
+ <% } else{ %>  
+   <% include partials/header.ejs %>
+  <% include partials/navigation.ejs %>
+<% } %>
+
+ 
+
+
+   <div id = "mains">
+    	<article>
+      	<h2 class="about">
+      	About Us
+      	</h2>
+    	</article>
+
+    	<article>
+      	<h3>
+      	Platform to participate and create CCI events to connect with people<br>
+       Whether you are looking for a friend,trying to connect with others who are interested in something you love<br>
+       Check out the connections pageto browse available connections<br>
+        </h3>
+      </article>
+
+    </div>
+
+
+<% include partials/footer.ejs %>
+</div>
+</body>
+</html>

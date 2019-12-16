@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My Title</title>
+        <link rel="stylesheet" type="text/css" href="assets/main.css">
+    </head>
+    <body>
+    	<div id ="wrapper">
+        
+        <% include partials/header_log.ejs %>
+        <% include partials/navigation.ejs %>
+      <section>
+
+         <div class="games">
+                        <p><b>Mario's Connections</b></p>
+                    </div>
+      		
+      	<table>
+      <tr>
+        <th>Connection</th>
+        <th>Category</th>
+        <th>Going</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <td>ITSC 1213 -Working with Netbeans</td>
+        <td>Study</td>
+        <td>Yes</td>
+        <td><button class="editbtn" onclick="location.href='/connection';">UPDATE</button></td>
+        <td><button class="editbtn" onclick="location.href='/savedconnections';">DELETE</button></td>
+      </tr>
+      <tr>
+        <td>Disc Golf</td>
+        <td>Sports</td>
+        <td>Maybe</td>
+        <td><button class="editbtn" onclick="location.href='/connection';">UPDATE</button></td>
+       <td><button class="editbtn" onclick="location.href='/savedconnections';">DELETE</button></td>
+      </tr>
+    </table>
+                  
+      	
+      </section>
+            <% include partials/footer.ejs %>
+    </div>
+    </body>
+</html>

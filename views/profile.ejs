@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My Title</title>
+        <link rel="stylesheet" type="text/css" href="assets/main.css">
+    </head>
+    <body>
+    	<div id ="wrapper">
+        
+        <% include partials/header_log.ejs %>
+        <% include partials/navigation.ejs %>
+      <section>
+
+         <div class="games">
+                        <p><b><%= user.user_ID%></b>'s  Connections</p>
+                    </div>
+      		
+      	<table>
+      <tr>
+        <th>Connection</th>
+        <th>Category</th>
+        <th>Going</th>
+        <th></th>
+        <th></th>
+      </tr>
+     <%
+         for(var j=0; j< data.length;j++)
+              { %>
+      <tr>
+       
+      <td><a href="/item?connection_ID=<%= data[j][0].connection_ID %>" onclick="return false;"><%= data[j][0].connection_name %></a></td>
+                    <td><%= data[j][0].connection_topic %></td>
+                    <td><%= data[j][0].rsvp %></td>
+                     <td><form action="/connection/changes" method="POST">
+                      <input type="hidden" name="connectioncode" value="<%= data[j][0].connection_ID %>">
+                      <button type="submit" class="button" name="action" value="Updateprofile">Update</button>
+                    </form></td>
+                    <td><form action="/connection/changes" method="POST">
+                      <input type="hidden" name="connectioncode" value="<%= data[j][0].connection_ID %>">
+                      <button type="submit" class="button" name="action" value="delete">Delete</button>
+                    </form></td> 
+          </tr>
+          <% } %>
+      </table>    
+      	
+      </section>
+            <% include partials/footer.ejs %>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My Title</title>
+        <link rel="stylesheet" type="text/css" href="assets/main.css">
+    </head>
+    <body>
+    	<div id ="wrapper">
+       <% if(session == 1){ %>
+       <% include partials/connection_log.ejs %>
+        <% include partials/navigation_log.ejs %>
+ <% } else{ %>  
+   <% include partials/header.ejs %>
+        <% include partials/navigation.ejs %>
+      
+<% } %>
+      <section>
+        <h3 id = "main-title"><%= data[0].connection_name %>
+          
+        </h3>
+      </section>
+      <aside>
+         <h3>Details</h3>
+         <!-- <b>I'm new to this Netbeans and would</b><br/> 
+        <b>love to connect  with others to</b><br/>
+        <b>explore this IDE and learn</b><br/> -->
+        <br><%- data[0].details %><br/>
+      </aside>
+      <section>
+      	<img id = "user_image" src="/assets/images/supermario.jpg">
+        <div class ="event-right">
+        <b>Hosted by <%= data[0].hosted_by %>
+        </b><br/> 
+
+        <b><%= data[0].date %>
+        </b><br/>
+
+     
+
+        <b><%= data[0].location %></b><br/>
+      </div>
+     <td>
+                               <td><form action="/connection/changes" method="POST">
+                      <input type="hidden" name="connectioncode" value="<%= data[0].connection_ID %>">
+                      <button type="submit" class="button" name="action" value="UpdatersvpYes">Yes</button>
+                    </form></td>
+                    <td><form action="/connection/changes" method="POST">
+                       <input type="hidden" name="connectioncode" value="<%= data[0].connection_ID %>">
+                      <button type="submit" class="button" name="action" value="UpdatersvpNo">No</button>
+                    </form></td> 
+                     <td><form action="/connection/changes" method="POST">
+                       <input type="hidden" name="connectioncode" value="<%= data[0].connection_ID %>">
+                      <button type="submit" class="button" name="action" value="UpdatersvpMaybe">May Be</button>
+                    </form></td> 
+      </section>
+      <div id=user-right-info>
+        <h4>Are you going?3 people are going.</h4>
+      </div>
+               <% include partials/footer.ejs %>
+
+    </div>
+    </body>
+</html>

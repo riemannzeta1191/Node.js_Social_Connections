@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My Title</title>
+        <link rel="stylesheet" type="text/css" href="assets/main.css">
+    
+       
+      
+      <section>
+        <div id ="list">
+          <%
+            for(var i=0; i< data.categories.length; i++){ %>
+              <h2><%= data.categories[i] %>
+                
+              </h2>
+              <ol>
+                <%
+                  for(var j=0; j< data.connections.length;j++){
+                      if(data.categories[i] === data.connections[j].connection_topic){ %>
+                      <li><a href = "/<%= data.connections[j].connection_ID %>"><%= data.connections[j].connection_name %></a></li>
+              <% }
+                  }
+                   %>
+               </ol>  
+           <% }%>                    
+      		 		
+      </div>	
+      </section>
+       
+        
+    </div>
+    </body>
+</html>
